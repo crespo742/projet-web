@@ -64,9 +64,6 @@ const Index = () => {
       <TitlePage title={product && product.attributes.title} />
       <div className="text__center">
         <ProductPrice price={product && product.attributes.price} currency="€" />
-        <ProductImg>
-          <img src={`http://localhost:1337${product && product.attributes.image.data.attributes.url}`}/>
-        </ProductImg>
         <Button
           type="button"
           classes="btn btn__color-black"
