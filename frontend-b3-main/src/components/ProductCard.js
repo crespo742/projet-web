@@ -31,10 +31,9 @@ const Productcard = (props) => {
                   <Link href={`/shop/${props.product.id}`}>
                   {/* <Link href={'/shop/' + props.product.id} */}
                     <a>
-                      Voir le produit
+                      <Button title="Voir le produit" type="button" classes="btn btn__color-black"/>
                     </a>
                   </Link>
-                  <Button title="ajouter au panier" function={()=> addTocart(props.product) } type="button" classes="btn btn__color-black"/>
                 </p>
               </div>
             </div>
