@@ -26,7 +26,11 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Button type="button" classes="btn btn__color-white" function={() => console.log("islogged")} title="login" />
+            <Link href="/login">
+              <a className="nav__link">
+                <Button type="button" classes="btn btn__color-white" function={() => console.log("islogged")} title="login" />
+              </a>
+            </Link>
           </li>
         </ul>
       </nav>
