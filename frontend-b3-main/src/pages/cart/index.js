@@ -52,41 +52,37 @@ const Index = () => {
         <>
           <p>Vous avez {renderTotalQty()} produits dans votre panier</p>
           <table>
-		  <div class="column-labels">
-					<label class="product-image">Image</label>
-					<label class="product-details">Product</label>
-					<label class="product-price">Price</label>
-					<label class="product-quantity">Quantity</label>
-					<label class="product-removal">Remove</label>
-					<label class="product-line-price">Total</label>
-					</div>
+            <div class="column-labels">
+              <label class="product-image">Image</label>
+              <label class="product-details">Product</label>
+              <label class="product-price">Price</label>
+              <label class="product-quantity">Quantity</label>
+              <label class="product-removal">Remove</label>
+              <label class="product-line-price">Total</label>
+            </div>
             <tbody>
               {cart.map((cartItem) => (
                 <tr key={cartItem.id}>
                   <div>
-
-
-
-					<div class="product">
-					<div class="product-image">
-						<img src={`http://localhost:1337${cartItem.url}`}/>
-					</div>
-					<div class="product-details">
-						<div class="product-title">{cartItem.title}</div>
-						
-					</div>
-					<div class="product-price">{cartItem.price}</div>
-					<div class="product-quantity">
-						<button onClick={() => decrementQty(cartItem)}>-</button>
-							{cartItem.quantity}
-						<button onClick={() => incrementQty(cartItem)}>+</button>
-					</div>
-					<div class="product-removal">
-						<button class="remove-product" onClick={()=>deleteProduct(cartItem)}>Supprimer</button>
-					</div>
-					<div class="product-line-price">{(cartItem.price * cartItem.quantity).toFixed(2)}</div>
-					</div>
-					</div>
+                    <div class="product">
+                      <div class="product-image">
+                        <img src={`http://localhost:1337${cartItem.url}`}/>
+                      </div>
+                      <div class="product-details">
+                        <div class="product-title">{cartItem.title}</div> 
+                      </div>
+                      <div class="product-price">{cartItem.price}</div>
+                      <div class="product-quantity">
+                        <button onClick={() => decrementQty(cartItem)}>-</button>
+                          {cartItem.quantity}
+                        <button onClick={() => incrementQty(cartItem)}>+</button>
+                      </div>
+                      <div class="product-removal">
+                        <button class="remove-product" onClick={()=>deleteProduct(cartItem)}>Supprimer</button>
+                      </div>
+                      <div class="product-line-price">{(cartItem.price * cartItem.quantity).toFixed(2)}</div>
+                    </div>
+                  </div>
                 </tr>
               ))}
             </tbody>
@@ -102,8 +98,6 @@ const Index = () => {
       ) : (
         <p className="text__center">Votre panier est vide</p>
       )}
-	  
-
     </div>
   );
 };
