@@ -52,12 +52,7 @@ const Index = () => {
         <>
           <p>Vous avez {renderTotalQty()} produits dans votre panier</p>
           <table>
-            <tbody>
-              {cart.map((cartItem) => (
-                <tr key={cartItem.id}>
-                  <div class="shopping-cart">
-
-					<div class="column-labels">
+		  <div class="column-labels">
 					<label class="product-image">Image</label>
 					<label class="product-details">Product</label>
 					<label class="product-price">Price</label>
@@ -65,6 +60,12 @@ const Index = () => {
 					<label class="product-removal">Remove</label>
 					<label class="product-line-price">Total</label>
 					</div>
+            <tbody>
+              {cart.map((cartItem) => (
+                <tr key={cartItem.id}>
+                  <div class="shopping-cart">
+
+
 
 					<div class="product">
 					<div class="product-image">
