@@ -52,7 +52,6 @@ const Index = () => {
         <>
           <p>Vous avez {renderTotalQty()} produits dans votre panier</p>
           <table>
-            
             <tbody>
               {cart.map((cartItem) => (
                 <tr key={cartItem.id}>
