@@ -107,6 +107,9 @@
 .card-footer{
   padding: 25px 0 5px;
   border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .card-footer:after, .card-footer:before{
   content:'';
