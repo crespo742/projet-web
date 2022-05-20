@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className={`header__main ${show && "header__main__black"}`}>
       <div className="header__logo">
-        <img src={Logo.src} alt="nike" />
+        <img src={Logo.src} alt="logo" className={`${show && "header__img"}`} />
       </div>
       <nav className="header__nav">
         <ul className="nav__list">
