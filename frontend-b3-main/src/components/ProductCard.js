@@ -21,11 +21,11 @@ const Productcard = (props) => {
 };
     return (
         <div className="product__card">
+              <div className="product__data">
+                <h2>{props.product.attributes.title}</h2> 
               <div className="product__img">
                 <img src={`http://localhost:1337${props.product.attributes.image.data.attributes.url}`} alt={props.product.attributes.title} />
               </div>
-              <div className="product__data">
-                <h2>{props.product.attributes.title}</h2>
                 <p>{props.product.attributes.price} € </p>
                 <p>
                   <Link href={`/shop/${props.product.id}`}>
