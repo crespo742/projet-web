@@ -30,7 +30,7 @@ const Index = () => {
     let productToInsert = {
       id: element.id,
       title: element.attributes.title,
-      image: element.attributes.image,
+      url: element.attributes.image.data.attributes.url,
       price: element.attributes.price,
       quantity: 1
     };

@@ -54,6 +54,7 @@ const Index = () => {
           <table>
             <thead>
               <tr>
+                <th>Image</th>
                 <th>Titre</th>
                 <th>Prix</th>
                 <th>Quantité</th>
@@ -64,6 +65,9 @@ const Index = () => {
             <tbody>
               {cart.map((cartItem) => (
                 <tr key={cartItem.id}>
+                  <td>
+                    <img src={`http://localhost:1337${cartItem.url}`} height="100px" width="100px" />
+                  </td>
                   <td>{cartItem.title}</td>
                   <td>{cartItem.price}</td>
                   <td>
