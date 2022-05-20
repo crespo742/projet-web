@@ -16,7 +16,7 @@ export default function Home() {
       </>
 
       <div className="text__center">
-        <p>FootWear est une entreprise qui revend des chaussures au meilleur prix</p>
+        <h4>FootWear est une entreprise qui revend des chaussures au meilleur prix</h4>
       </div>
 
       <>

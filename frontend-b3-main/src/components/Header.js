@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import LogoNike from "../public/logo-nike.png";
 import Button from "./Button";
+import Logo from "../public/Logo.png";
 
 const Header = () => {
 
@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className={`header__main ${show && "header__main__black"}`}>
       <div className="header__logo">
-        <img src={LogoNike.src} alt="nike" />
+        <img src={Logo.src} alt="nike" />
       </div>
       <nav className="header__nav">
         <ul className="nav__list">
