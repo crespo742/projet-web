@@ -3,22 +3,23 @@ import Button from "../components/Button";
 
 const Productcard = (props) => {
   
-  const addTocart = (element) => { 
-    const cartArray = [];
-    if (localStorage.getItem('cart')) {
-        const localStorageCart = JSON.parse(localStorage.getItem('cart'));
-        localStorageCart.forEach(product => {
-            cartArray.push(product);    
-        });
-        cartArray.push(element);
-        console.log(cartArray);
-        localStorage.setItem('cart', JSON.stringify(cartArray));
-    }
-    else {
-        cartArray.push(element);
-        localStorage.setItem('cart', JSON.stringify(cartArray));
-    }
-};
+  // const addTocart = (element) => { 
+  //   const cartArray = [];
+  //   if (localStorage.getItem('cart')) {
+  //       const localStorageCart = JSON.parse(localStorage.getItem('cart'));
+  //       localStorageCart.forEach(product => {
+  //           cartArray.push(product);    
+  //       });
+  //       cartArray.push(element);
+  //       console.log(cartArray);
+  //       localStorage.setItem('cart', JSON.stringify(cartArray));
+  //   }
+  //   else {
+  //       cartArray.push(element);
+  //       localStorage.setItem('cart', JSON.stringify(cartArray));
+  //   }
+  // };
+  
     return (
         <div className="product__card">
           <div class="shell">
@@ -27,7 +28,7 @@ const Productcard = (props) => {
                 <div class="col-md-3">
                   <div class="wsk-cp-product">
                     <div class="wsk-cp-img">
-                    <img src={`http://localhost:1337${props.product.attributes.image.data.attributes.url}`} alt={props.product.attributes.title} />
+                      <img src={`http://localhost:1337${props.product.attributes.image.data.attributes.url}`} alt={props.product.attributes.title} />
                     </div>
                     <div class="wsk-cp-text">
                       <div class="title-product">

@@ -5,6 +5,8 @@ import ProductPrice from "../../../components/ProductPrice";
 import Button from "../../../components/Button";
 import productService from "../../../services/product.service";
 import ProductImg from "../../../components/ProductImg";
+import ProductDescription from "../../../components/ProductDescription";
+
 
 const Index = () => {
 
@@ -17,6 +19,7 @@ const Index = () => {
       productService.getProduct(id)
       .then((data) => {
         console.log(data.data.attributes,"DATA");
+        console.log(data.data);
         setProduct(data.data);
       })
       .catch((err) => console.log(err));      
@@ -63,6 +66,8 @@ const Index = () => {
     <div className="product_page">
       <TitlePage title={product && product.attributes.title} />
       <div className="text__center">
+        <ProductImg url={product && product.attributes.image.data.attributes.url} />
+        <ProductDescription description={product && product.attributes.description}/>
         <ProductPrice price={product && product.attributes.price} currency="€" />
         <Button
           type="button"
