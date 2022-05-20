@@ -25,6 +25,8 @@ const Index = () => {
           ))}
       </div>
     </div>
+    
+    
   );
 };
 
