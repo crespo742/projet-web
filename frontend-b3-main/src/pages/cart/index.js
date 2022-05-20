@@ -47,39 +47,46 @@ const Index = () => {
   }
 
   return (
-    <div className="page__cart">
+    <div className="">
       {cart ? (
         <>
           <p>Vous avez {renderTotalQty()} produits dans votre panier</p>
           <table>
-            {/* <thead>
-              <tr>
-                <th>Image</th>
-                <th>Titre</th>
-                <th>Prix</th>
-                <th>Quantité</th>
-                <th>Total</th>
-                <th></th>
-              </tr>
-            </thead> */}
+            
             <tbody>
               {cart.map((cartItem) => (
                 <tr key={cartItem.id}>
-                  <td>
-                    <img src={`http://localhost:1337${cartItem.url}`} height="125px" width="125px" />
-                  </td>
-                  <td>{cartItem.title}</td>
-                  <td>{cartItem.price}</td>
-                  <td>
-                    <button onClick={() => decrementQty(cartItem)}>-</button>
-                    {cartItem.quantity}
-                    <button onClick={() => incrementQty(cartItem)}>+</button>
-                  </td>
-                  <td>{(cartItem.price * cartItem.quantity).toFixed(2)}</td>
-                  {/* .Filter() */}
-                  <td>
-                    <button onClick={()=>deleteProduct(cartItem)}>Supprimer</button>
-                  </td>
+                  <div class="shopping-cart">
+
+					<div class="column-labels">
+					<label class="product-image">Image</label>
+					<label class="product-details">Product</label>
+					<label class="product-price">Price</label>
+					<label class="product-quantity">Quantity</label>
+					<label class="product-removal">Remove</label>
+					<label class="product-line-price">Total</label>
+					</div>
+
+					<div class="product">
+					<div class="product-image">
+						<img src={`http://localhost:1337${cartItem.url}`}/>
+					</div>
+					<div class="product-details">
+						<div class="product-title">{cartItem.title}</div>
+						
+					</div>
+					<div class="product-price">{cartItem.price}</div>
+					<div class="product-quantity">
+						<button onClick={() => decrementQty(cartItem)}>-</button>
+							{cartItem.quantity}
+						<button onClick={() => incrementQty(cartItem)}>+</button>
+					</div>
+					<div class="product-removal">
+						<button class="remove-product" onClick={()=>deleteProduct(cartItem)}>Supprimer</button>
+					</div>
+					<div class="product-line-price">{(cartItem.price * cartItem.quantity).toFixed(2)}</div>
+					</div>
+					</div>
                 </tr>
               ))}
             </tbody>
@@ -95,6 +102,8 @@ const Index = () => {
       ) : (
         <p className="text__center">Votre panier est vide</p>
       )}
+	  
+
     </div>
   );
 };
