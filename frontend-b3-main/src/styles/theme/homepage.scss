@@ -1,0 +1,12 @@
+.homepage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+    &__text{
+        padding: 1rem;
+    }
+    &__img{
+        padding: 1rem;
+    }
+}
