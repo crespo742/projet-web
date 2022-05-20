@@ -20,8 +20,9 @@ const Index = () => {
 			<div>
 				<TitlePage title="Profil" />
 				<div className="text__center">
+					<p>Username: {user && user.username}</p>
 					<p>Nom: {user && user.firstName}</p>
-					<p>Prénom: {user && user.lastName}</p>
+					<p>Prenom: {user && user.lastName}</p>
 					<p>Email: {user && user.email}</p>
 					<p>
 						<Button title="logout" classes="btn btn__color-white" />
