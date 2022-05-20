@@ -39,7 +39,7 @@ const Index = () => {
 
   const renderTotalAmount = () => {
     return (
-      <p className="text__center">Montant total : {cart.reduce((total, product) => total + (product.quantity * product.price),0)} €</p>
+      <p className="text__center">Montant total de votre panier : {cart.reduce((total, product) => total + (product.quantity * product.price),0)} €</p>
     )
   }
 

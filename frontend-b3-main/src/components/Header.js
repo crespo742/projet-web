@@ -1,10 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import LogoNike from "../public/logo-nike.png";
 import Button from "./Button";
+
 const Header = () => {
+
+  const [show, handleShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 90) {
+        handleShow(true);
+      } else handleShow(false);
+    });
+    return () => {
+      window.removeEventListener("scroll")
+    };
+  }, []);
+
   return (
-    <header className="header__main">
+    <header className={`header__main ${show && "header__main__black"}`}>
       <div className="header__logo">
         <img src={LogoNike.src} alt="nike" />
       </div>
