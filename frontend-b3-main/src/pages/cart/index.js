@@ -63,7 +63,7 @@ const Index = () => {
             <tbody>
               {cart.map((cartItem) => (
                 <tr key={cartItem.id}>
-                  <div class="shopping-cart">
+                  <div>
 
 
 
