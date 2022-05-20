@@ -49,7 +49,7 @@ const Index = () => {
 
   return (
     <div className="">
-      <TitlePage title="Crespo&Co" />
+      <TitlePage title="FootWear" />
       {cart ? (
         <>
           <p className="text__center">Vous avez {renderTotalQty()} produits dans votre panier</p>

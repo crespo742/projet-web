@@ -18,7 +18,7 @@ const Index = () => {
 
     return (
 			<div>
-				<TitlePage title="Crespo&Co" />
+				<TitlePage title="FootWear" />
 				<div className="text__center">
 					<p>Username: {user && user.username}</p>
 					<p>Nom: {user && user.firstName}</p>

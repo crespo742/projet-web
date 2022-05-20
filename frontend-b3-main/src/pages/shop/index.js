@@ -17,7 +17,7 @@ const Index = () => {
 
   return (
     <div className="page__shop">
-      <TitlePage title="Crespo&Co" />
+      <TitlePage title="FootWear" />
       <div className="products__grid">
         {products &&
           products.map((product) => (

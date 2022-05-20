@@ -37,7 +37,7 @@ const Index = () => {
 
   return (
 		<div className="page__login">
-			<TitlePage title="Crespo&Co" />
+			<TitlePage title="FootWear" />
 		<Modal title="Erreur" isActive={showModal} closeFunction={()=>setShowModal(!showModal)} type="information">
         	<p>Une erreur est survenue, veuillez contacter le service client.</p>
       	</Modal>
