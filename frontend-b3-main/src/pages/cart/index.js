@@ -52,7 +52,7 @@ const Index = () => {
         <>
           <p>Vous avez {renderTotalQty()} produits dans votre panier</p>
           <table>
-            <thead>
+            {/* <thead>
               <tr>
                 <th>Image</th>
                 <th>Titre</th>
@@ -61,12 +61,12 @@ const Index = () => {
                 <th>Total</th>
                 <th></th>
               </tr>
-            </thead>
+            </thead> */}
             <tbody>
               {cart.map((cartItem) => (
                 <tr key={cartItem.id}>
                   <td>
-                    <img src={`http://localhost:1337${cartItem.url}`} height="100px" width="100px" />
+                    <img src={`http://localhost:1337${cartItem.url}`} height="125px" width="125px" />
                   </td>
                   <td>{cartItem.title}</td>
                   <td>{cartItem.price}</td>
