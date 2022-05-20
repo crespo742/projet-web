@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <div className="page__home">
-        <TitlePage title="Homepage"/>
+        <TitlePage title="Crespo&Co"/>
       </div>
 
       <section className="homepage">

@@ -64,6 +64,7 @@ const Index = () => {
 
   return (
     <div className="product_page">
+      <TitlePage title="Crespo&Co" />
       <TitlePage title={product && product.attributes.title} />
       <div className="text__center">
         <ProductImg url={product && product.attributes.image.data.attributes.url} />

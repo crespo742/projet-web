@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../components/Button";
+import TitlePage from "../../components/TitlePage";
 
 const Index = () => {
   const [cart, setCart] = useState();
@@ -48,6 +49,7 @@ const Index = () => {
 
   return (
     <div className="">
+      <TitlePage title="Crespo&Co" />
       {cart ? (
         <>
           <p className="text__center">Vous avez {renderTotalQty()} produits dans votre panier</p>
@@ -71,7 +73,7 @@ const Index = () => {
                       <div class="product-details">
                         <div class="product-title">{cartItem.title}</div> 
                       </div>
-                      <div class="product-price">{cartItem.price}</div>
+                      <div class="product-price">{cartItem.price}€</div>
                       <div class="product-quantity">
                         <button onClick={() => decrementQty(cartItem)}>-</button>
                           {cartItem.quantity}
@@ -80,7 +82,7 @@ const Index = () => {
                       <div class="product-removal">
                         <button class="remove-product" onClick={()=>deleteProduct(cartItem)}>Supprimer</button>
                       </div>
-                      <div class="product-line-price">{(cartItem.price * cartItem.quantity).toFixed(2)}</div>
+                      <div class="product-line-price">{(cartItem.price * cartItem.quantity).toFixed(2)}€</div>
                     </div>
                   </div>
                 </tr>

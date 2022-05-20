@@ -5,6 +5,7 @@ import Button from "../../components/Button";
 import { useRouter } from "next/router";
 import Link from 'next/dist/client/link';
 import Modal from '../../components/Modal';
+import TitlePage from "../../components/TitlePage";
 
 const Index = () => {
   
@@ -36,6 +37,7 @@ const Index = () => {
 
   return (
 		<div className="page__login">
+			<TitlePage title="Crespo&Co" />
 		<Modal title="Erreur" isActive={showModal} closeFunction={()=>setShowModal(!showModal)} type="information">
         	<p>Une erreur est survenue, veuillez contacter le service client.</p>
       	</Modal>
