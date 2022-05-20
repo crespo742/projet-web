@@ -38,7 +38,7 @@ const Index = () => {
 
   const renderTotalAmount = () => {
     return (
-      <p>Montant total : {cart.reduce((total, product) => total + (product.quantity * product.price),0)} €</p>
+      <p className="text__center">Montant total : {cart.reduce((total, product) => total + (product.quantity * product.price),0)} €</p>
     )
   }
 
@@ -50,7 +50,7 @@ const Index = () => {
     <div className="">
       {cart ? (
         <>
-          <p>Vous avez {renderTotalQty()} produits dans votre panier</p>
+          <p className="text__center">Vous avez {renderTotalQty()} produits dans votre panier</p>
           <table>
             <div class="column-labels">
               <label class="product-image">Image</label>
@@ -89,7 +89,7 @@ const Index = () => {
           </table>
           <Button
             title="Supprimer le panier"
-            classes="btn btn__color-white"
+            classes="btn btn__color-white margin__left"
             type="button"
             function={deleteCart}
           />

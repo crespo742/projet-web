@@ -111,15 +111,17 @@ table{
   .remove-product {
     border: 0;
     padding: 4px 8px;
-    background-color: #c66;
-    color: #fff;
+    background-color: white;
+    color: black;
     font-family: $font-bold;
     font-size: 12px;
     border-radius: 3px;
   }
   
   .remove-product:hover {
-    background-color: #a44;
+    background-color: black;
+    color: white;
+    transition: 0.3s all;
   }
 }
 
