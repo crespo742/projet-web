@@ -3,6 +3,8 @@ import TitlePage from '../../components/TitlePage';
 import userService from '../../services/user.service';
 import withAuth from '../../HOC/withAuth';
 import Button from "../../components/Button";
+import Link from 'next/dist/client/link';
+
 const Index = () => {
 
     const [user, setUser] = useState();
@@ -25,7 +27,11 @@ const Index = () => {
 					<p>Prenom: {user && user.lastName}</p>
 					<p>Email: {user && user.email}</p>
 					<p>
-						<Button title="logout" classes="btn btn__color-white" />
+					<Link href="/login">
+						<a className="nav__link">
+							<Button title="logout" classes="btn btn__color-white" />
+						</a>
+					</Link>
 					</p>
 				</div>
 			</div>
