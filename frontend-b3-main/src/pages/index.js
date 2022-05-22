@@ -23,25 +23,25 @@ export default function Home() {
       </>
 
       <section className="homepage">
-        <div className="homepage__img">
+        <div className="homepage__img__left">
           <img src={Carton.src} alt="nike" height="300px"/>
         </div>
-        <div className="homepage__text">
+        <div className="homepage__text text__center">
           <p>Nous sommes une entreprise eco-responsable qui utilisons des cartons recyclés pour les envoies de chaussures</p>
         </div>
       </section>
 
       <section className="homepage">
-        <div className="homepage__text">
-          <p>Depuis 2015 nous avons recycler jusqu'a 1000 tonnes de déchets</p>
+        <div className="homepage__text text__center">
+          <p>Nous utilisons un datacenter canadien alimenté à 100% par des énergies vertes (barrages hydroélectriques) et sur de l’énergie exclusivement renouvelable. Cela vaut aussi pour le système de refroidissement.</p>
         </div>
-        <div className="homepage__img">
+        <div className="homepage__img__right">
           <img src={Eco.src} alt="nike" height="300px"/>
         </div>
       </section>
 
       <section className="homepage">
-        <div className="homepage__img">
+        <div className="homepage__img__left">
           <img src={Choquer.src} alt="nike" height="300px"/>
         </div>
         <div className="homepage__text text__center">
@@ -56,9 +56,9 @@ export default function Home() {
 
       <section className="homepage">
         <div className="homepage__text text__center">
-          <p>Ce projet me tiens a coeur et j'espere qu'il pourra prendre de l'ampleur pour ensuite etre un site web phare dans la vente de chaussures !</p>
+          <p>Ce projet nous tiens a coeur et j'espere qu'il pourra prendre de l'ampleur pour ensuite etre un site web phare dans la vente de chaussures !</p>
         </div>
-        <div className="homepage__img">
+        <div className="homepage__img__right">
           <img src={Monde.src} alt="nike" height="300px"/>
         </div>
       </section>
