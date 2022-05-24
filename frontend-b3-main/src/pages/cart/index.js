@@ -76,7 +76,9 @@ const Index = () => {
                       <div class="product-price">{cartItem.price}€</div>
                       <div class="product-quantity">
                         <button onClick={() => decrementQty(cartItem)}>-</button>
+                          <></>
                           {cartItem.quantity}
+                          <></>
                         <button onClick={() => incrementQty(cartItem)}>+</button>
                       </div>
                       <div class="product-removal">
